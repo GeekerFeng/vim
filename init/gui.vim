@@ -145,7 +145,15 @@ if has('gui_running')
 		catch
 		endtry
 		set guioptions-=t
-		set guioptions=egrmT
+        " 禁止显示滚动条
+        set guioptions-=l
+        set guioptions-=L
+        set guioptions-=r
+        set guioptions-=R
+
+        " 禁止显示菜单和工具条
+        set guioptions-=m
+        set guioptions-=T
 	elseif has('gui_macvim')
 		color seoul256
 		set guioptions=egrm
