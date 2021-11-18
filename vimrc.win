@@ -43,7 +43,6 @@ endif
 hi LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 hi SignColumn ctermbg=0
 
-set pythonthreedll=python39.dll
 set guifont=Ubuntu\ Mono:h12:b
 
 
