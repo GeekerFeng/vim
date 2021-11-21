@@ -4,7 +4,9 @@ exec 'so '.fnameescape(s:home).'/init.vim'
 exec 'so '.fnameescape(s:home).'/skywind.vim'
 
 set t_Co=256
-color desert256
+set background=dark
+"color desert256
+color gruvbox
 
 hi! CursorLineNr cterm=none
 
@@ -25,7 +27,7 @@ if g:vim_startup != '' || has('gui_running')
 endif
 
 if get(g:, 'vim_manual', 0) == 0
-	let g:bundle_group += ['simple', 'basic']
+	let g:bundle_group += ['simple', 'basic','youcompleteme','opt']
 	if g:vim_startup == 'nvim'
 		let g:bundle_group += ['inter']
 	elseif g:vim_startup == 'mvim'
