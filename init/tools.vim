@@ -11,7 +11,7 @@
 let s:winopen = 0
 set splitright
 set smartcase
-set switchbuf=useopen,usetab,newtab
+"set switchbuf=useopen,usetab,newtab
 set viewdir=~/.vim/view
 set wildmenu
 set wcm=<C-Z>

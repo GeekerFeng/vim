@@ -68,7 +68,7 @@ if (exists('*popup_create') && has('patch-8.1.2000')) || has('nvim-0.4')
 endif
 
 let g:Lf_PreviewInPopup = 1
-
+let g:Lf_RecurseSubmodules = 1
 
 "----------------------------------------------------------------------
 " filer
