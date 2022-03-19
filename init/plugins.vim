@@ -169,7 +169,7 @@ let g:ctrlp_custom_ignore = {
   \ 'link': 'some_bad_symbolic_links',
   \ }
 
-let g:ctrlp_root_markers = ['.project', '.root', '.svn', '.git']
+let g:ctrlp_root_markers = ['.project', '.root', '.svn']
 let g:ctrlp_working_path = 0
 
 
@@ -289,7 +289,8 @@ let g:indentLine_enabled = 1
 "----------------------------------------------------------------------
 " gutentags
 "----------------------------------------------------------------------
-let g:gutentags_project_root = ['.root','.svn','.root']
+let g:gutentags_add_default_project_roots = 0
+let g:gutentags_project_root = ['.root']
 let g:gutentags_ctags_tagfile = '.tags'
 
 " let g:gutentags_modules = ['ctags', 'gtags_cscope']
@@ -315,7 +316,8 @@ if has('win32') || has('win16') || has('win64') || has('win95')
 endif
 
 let g:gutentags_plus_switch = 1
-
+"debug
+let g:gutentags_trace = 0
 
 
 "----------------------------------------------------------------------
