@@ -291,7 +291,7 @@ endfunc
 " get project root
 "----------------------------------------------------------------------
 function! asclib#path#get_root(path, ...)
-	let markers = ['.root', '.git', '.hg', '.svn', '.project']
+	let markers = ['.root', '.hg', '.svn', '.project']
 	if exists('g:asclib_path_rootmarks')
 		let markers = g:asclib_path_rootmarks
 	endif
