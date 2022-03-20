@@ -16,7 +16,7 @@
 " core initialize
 "----------------------------------------------------------------------
 set nocompatible
-
+set relativenumber
 set backspace=eol,start,indent
 set autoindent
 set cindent
