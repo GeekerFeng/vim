@@ -44,5 +44,6 @@ hi LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=Dark
 hi SignColumn ctermbg=0
 
 set guifont=Ubuntu\ Mono:h12:b
-
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
 
