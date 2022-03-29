@@ -205,7 +205,7 @@ endif
 "----------------------------------------------------------------------
 " miscs
 "----------------------------------------------------------------------
-set scrolloff=2
+set scrolloff=999
 set showmatch
 set matchtime=3
 set listchars=tab:\|\ ,trail:.,extends:>,precedes:<
