@@ -46,4 +46,3 @@ hi SignColumn ctermbg=0
 set guifont=Ubuntu\ Mono:h12:b
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
-

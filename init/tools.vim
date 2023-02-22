@@ -857,4 +857,3 @@ endfunc
 
 command! -nargs=* -bang BrowseGit call s:BrowseGit(<q-args>, '<bang>')
 
-

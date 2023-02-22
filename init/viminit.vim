@@ -32,7 +32,7 @@ set display=lastline
 
 set shiftwidth=4
 set softtabstop=4
-set noexpandtab
+set expandtab
 set tabstop=4
 
 if has('multi_byte')
@@ -44,7 +44,6 @@ endif
 set formatoptions+=m
 set formatoptions+=B
 set showcmd
-
 
 "----------------------------------------------------------------------
 " map CTRL_HJKL to move cursor in all mode
@@ -296,6 +295,5 @@ nnoremap <silent>[op :setl paste<cr>
 nnoremap <silent>]op :setl nopaste<cr>
 nnoremap <silent>[ow :setl wrap<cr>
 nnoremap <silent>]ow :setl nowrap<cr>
-
 
 

@@ -295,7 +295,8 @@ let g:gutentags_ctags_tagfile = '.tags'
 
 " let g:gutentags_modules = ['ctags', 'gtags_cscope']
 if exists('g:gutentags_cache_dir') == 0
-	let g:gutentags_cache_dir = expand('~/.cache/tags')
+	"let g:gutentags_cache_dir = expand('~/.cache/tags')
+	let g:gutentags_cache_dir = expand('~/.vim/cache/.LfCache/gtags')
 endif
 
 if !isdirectory(g:gutentags_cache_dir)
@@ -319,11 +320,38 @@ let g:gutentags_plus_switch = 1
 "debug
 let g:gutentags_trace = 0
 
+let g:gutentags_exclude_filetypes = ['gitcommit', 'gitconfig', 'gitrebase', 'gitsendemail', 'git', 'cmake']
+let g:gutentags_ctags_exclude = [
+\  '*.git', '*.svn', '*.hg',
+\  'cache', 'dist', 'bin', 'node_modules', 'bower_components',
+\  '*-lock.json',  '*.lock',
+\  '*.min.*',
+\  'CMakeLists.txt', 'targetfs',
+\  '*.bak',
+\  '*.zip',
+\  '*.pyc',
+\  '*.class',
+\  '*.sln',
+\  '*.csproj', '*.csproj.user',
+\  '*.tmp',
+\  '*.cache',
+\  '*.vscode',
+\  '*.pdb',
+\  '*.pb',
+\  '*.exe', '*.dll', '*.bin',
+\  '*.mp3', '*.ogg', '*.flac',
+\  '*.swp', '*.swo',
+\  '.DS_Store', '*.plist',
+\  '*.bmp', '*.gif', '*.ico', '*.jpg', '*.png', '*.svg',
+\  '*.rar', '*.zip', '*.tar', '*.tar.gz', '*.tar.xz', '*.tar.bz2',
+\  '*.pdf', '*.doc', '*.docx', '*.ppt', '*.pptx', '*.xls',
+\  '*.html', '*.html5', '*.y',
+\]
+
 
 "----------------------------------------------------------------------
 " styles
 "----------------------------------------------------------------------
 let g:jellybeans_use_term_italics = 0
 let g:jellybeans_use_gui_italics = 0
-
 

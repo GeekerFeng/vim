@@ -43,7 +43,7 @@ let g:Lf_NoChdir = 1
 
 let g:Lf_WildIgnore = {
             \ 'dir': ['.svn','.git','.hg'],
-            \ 'file': ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]']
+            \ 'file': ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]','*.html']
 			\ }
 
 let g:Lf_MruFileExclude = ['*.so', '*.exe', '*.py[co]', '*.sw?', '~$*', '*.bak', '*.tmp', '*.dll']
@@ -69,6 +69,8 @@ endif
 
 let g:Lf_PreviewInPopup = 1
 let g:Lf_RecurseSubmodules = 1
+let g:Lf_GtagsAutoGenerate = 0
+let g:Lf_GtagsGutentags = 1
 
 "----------------------------------------------------------------------
 " filer
@@ -89,21 +91,26 @@ nnoremap <leader>fe :<c-u>Leaderf filer<cr>
 nnoremap <leader>fb :<c-u>Leaderf buffer<cr>
 nnoremap <leader>fm :<c-u>Leaderf mru<cr>
 nnoremap <leader>fg :<c-u>Leaderf gtags<cr>
-nnoremap <leader>fr :<c-u>Leaderf rg<cr>
+"nnoremap <leader>fr :<c-u>Leaderf rg<cr>
+noremap <leader>fs :<C-U><C-R>=printf("Leaderf! gtags -s %s --auto-jump", expand("<cword>"))<CR><CR>
+noremap <leader>fr :<C-U><C-R>=printf("Leaderf! gtags -r %s --auto-jump", expand("<cword>"))<CR><CR>
+noremap <leader>fd :<C-U><C-R>=printf("Leaderf! gtags -d %s --auto-jump", expand("<cword>"))<CR><CR>
+noremap <leader>fo :<C-U><C-R>=printf("Leaderf! gtags --recall %s", "")<CR><CR>
+noremap <leader>fn :<C-U><C-R>=printf("Leaderf gtags --next %s", "")<CR><CR>
+noremap <leader>fp :<C-U><C-R>=printf("Leaderf gtags --previous %s", "")<CR><CR>
 nnoremap <leader>fw :<c-u>Leaderf window<cr>
-nnoremap <leader>fn :<c-u>Leaderf function<cr>
+nnoremap <leader>fu :<c-u>Leaderf function<cr>
 nnoremap <leader>ft :<c-u>Leaderf tag<cr>
-nnoremap <leader>fu :<c-u>Leaderf bufTag<cr>
-nnoremap <leader>fs :<c-u>Leaderf self<cr>
+nnoremap <leader>ftb :<c-u>Leaderf bufTag<cr>
+"nnoremap <leader>fs :<c-u>Leaderf self<cr>
 nnoremap <leader>fc :<c-u>Leaderf colorscheme<cr>
 nnoremap <leader>fy :<c-u>Leaderf cmdHistory<cr>
-" nnoremap <leader>fh :<c-u>Leaderf help<cr>
+"nnoremap <leader>fh :<c-u>Leaderf help<cr>
 nnoremap <leader>fj :<c-u>Leaderf jumps<cr>
-nnoremap <leader>fp :<c-u>Leaderf snippet<cr>
+"nnoremap <leader>fs :<c-u>Leaderf snippet<cr>
 nnoremap <leader>fq :<c-u>Leaderf quickfix<cr>
 nnoremap <leader>fa :<c-u>Leaderf tasks<cr>
 
 inoremap <c-x><c-j> <c-\><c-o>:Leaderf snippet<cr>
 
-nnoremap <leader>fd :exec 'Leaderf filer ' . shellescape(expand('%:p:h'))<cr>
-
+"nnoremap <leader>fd :exec 'Leaderf filer ' . shellescape(expand('%:p:h'))<cr>
